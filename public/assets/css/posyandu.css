@@ -63,7 +63,8 @@ body {
 .image-box {
   height: 20rem;
   /* GANTI NAMA FILE GAMBARNYA DI SINI */
-  background-image: url("../images/Posyandu-Final.webp");
+  /* Simpan gambar baru di: public/assets/images/header-mina.jpg */
+  background-image: url("../images/header-mina.jpg");
   background-size: cover;
   background-position: center;
 }
