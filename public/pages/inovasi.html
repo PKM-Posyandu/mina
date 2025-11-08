@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inovasi & Cakupan Posyandu Mina</title>
+
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Product Sans", "sans-serif"],
+            },
+            colors: {
+              "logo-blue": "#00BFFF",
+              "logo-orange": "#FFA500",
+              "logo-pink": "#F900C6",
+              "logo-green": "#32CD32",
+              "logo-purple": "#9B30FF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 min-h-screen">
+
+    <!-- HEADER -->
+    <header class="bg-logo-blue text-white p-4 flex items-center shadow-lg">
+      <div class="flex-1">
+        <a
+          href="/"
+          class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium"
+        >
+          ← Kembali
+        </a>
+      </div>
+
+      <div class="flex-1 text-center">
+        <h1 class="font-bold text-xl text-black">
+          <span class="sm:hidden">Inovasi Posyandu</span>
+          <span class="hidden sm:inline">Inovasi & Cakupan Posyandu Mina</span>
+        </h1>
+      </div>
+
+      <div class="flex-1"></div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto py-14 px-4 max-w-5xl">
+
+      <h2 class="text-3xl font-bold text-center mb-8 text-logo-orange">
+        Daftar Inovasi & Cakupan
+      </h2>
+
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        Berikut adalah beberapa inovasi yang dikembangkan Posyandu Mina dalam meningkatkan pelayanan kepada masyarakat, serta cakupan manfaat yang diberikan.
+      </p>
+
+      <!-- GRID CARD -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- CARD 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🧠</div>
+          <h3 class="text-xl font-bold mb-2">Si Mina Mobile</h3>
+          <p class="text-gray-600 text-sm">
+            Layanan jemput bola untuk balita & lansia yang tidak dapat hadir langsung ke posyandu.
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">📱</div>
+          <h3 class="text-xl font-bold mb-2">Aplikasi Posyandu Online</h3>
+          <p class="text-gray-600 text-sm">
+            Sistem pencatatan digital untuk imunisasi, gizi, dan perkembangan anak berbasis QR Code.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🍼</div>
+          <h3 class="text-xl font-bold mb-2">Program Gizi Seimbang</h3>
+          <p class="text-gray-600 text-sm">
+            Edukasi gizi & pembagian PMT (Pemberian Makanan Tambahan) terjadwal bagi balita.
+          </p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🚑</div>
+          <h3 class="text-xl font-bold mb-2">Layanan Darurat Kesehatan</h3>
+          <p class="text-gray-600 text-sm">
+            Sinergi dengan puskesmas dan ambulans siaga untuk kasus darurat kesehatan ibu & anak.
+          </p>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">👶</div>
+          <h3 class="text-xl font-bold mb-2">Monitoring Tumbuh Kembang</h3>
+          <p class="text-gray-600 text-sm">
+            Pencatatan tinggi badan, berat badan, dan perkembangan balita berbasis grafik WHO.
+          </p>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🤝</div>
+          <h3 class="text-xl font-bold mb-2">Kader Sahabat Ibu</h3>
+          <p class="text-gray-600 text-sm">
+            Pendampingan kader untuk ibu hamil, nifas, dan menyusui dari awal sampai masa tumbuh kembang.
+          </p>
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

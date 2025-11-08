@@ -1,0 +1,228 @@
+/* Mendaftarkan font lokal (Product Sans) */
+@font-face {
+  font-family: "Product Sans";
+  /* Pastikan nama file ini sama persis sama file di folder 'fonts' lu */
+  src: url("../fonts/ProductSans-Regular.woff2") format("woff2");
+  font-weight: 400; /* 400 itu tebal normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  /* Pastikan nama file ini sama persis sama file di folder 'fonts' lu */
+  src: url("../fonts/ProductSans-Medium.woff2") format("woff2");
+  font-weight: 500; /* 500 itu tebal medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  /* Pastikan nama file ini sama persis sama file di folder 'fonts' lu */
+  src: url("../fonts/ProductSans-Bold.woff2") format("woff2");
+  font-weight: 700; /* 700 itu tebal (bold) */
+  font-style: normal;
+}
+
+/* Font default (DIUBAH DARI "Google Sans" JADI "Product Sans") */
+body {
+  font-family: "Product Sans", sans-serif;
+  font-weight: 400; /* Set default weight to regular */
+}
+
+/* Navbar links */
+.nav-link {
+  color: #4b5563; /* gray-600 */
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #3b82f6; /* blue-500 */
+}
+
+/* Input search */
+.search-box {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+}
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #a53bf6;
+}
+
+/* Reusable boxes */
+.info-box,
+.image-box,
+.gallery-box,
+.service-image {
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+}
+.info-box {
+  height: 5rem;
+}
+.image-box {
+  height: 20rem;
+  /* GANTI NAMA FILE GAMBARNYA DI SINI */
+  background-image: url("../images/Posyandu-Final.webp");
+  background-size: cover;
+  background-position: center;
+}
+.gallery-box {
+  height: 15rem;
+}
+.service-image {
+  height: 10rem;
+}
+
+/* Section styling */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700; /* Menggunakan Product Sans Bold */
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+.section-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Service card */
+.service-card {
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 500; /* Menggunakan Product Sans Medium */
+  color: #374151;
+  margin-top: 1rem;
+}
+
+/* Button (DIUBAH BIAR KONSISTEN) bagian daftar sekarang dan forum pengaduan */
+.btn-primary {
+  /* Warna dasar diubah jadi biru terang untuk kedua mode */
+  background-color: #228b22; /* green-400 */
+  color: white;
+  font-weight: 500; /* Menggunakan Product Sans Medium */
+  padding: 0.75rem 3rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  /* Warna hover dibuat lebih gelap untuk kedua mode */
+  background-color: #2563eb; /* blue-600 */
+}
+
+.gallery-item {
+  flex-shrink: 0; /* Ganti inline-block menjadi ini agar item tidak menyusut */
+  width: calc(
+    33.333% - 1.333rem
+  ); /* Tampilkan 3 item dengan margin yang dihitung */
+  aspect-ratio: 16 / 9;
+  margin: 0 0.5rem; /* Margin yang akan digunakan untuk perhitungan JS */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: center;
+  font-weight: 500; /* Menggunakan Product Sans Medium */
+}
+
+@media (max-width: 1024px) {
+  .gallery-item {
+    width: calc(50% - 1rem); /* Tampilkan 2 item di tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: calc(100% - 2rem); /* Tampilkan 1 item di mobile */
+    margin: 0 1rem;
+  }
+}
+
+/* ===================================================================== */
+/* ============= KODE FOOTER BARU (SIMPLE & KONTRAST) ============= */
+/* ===================================================================== */
+
+/* --- Tentukan Resep Warna --- */
+/* Resep untuk Light Mode */
+#main-footer {
+  --text-color: #111827; /* Warna gray-900 (Hitam Pekat) */
+  --link-color: #2563eb; /* Warna blue-600 (Biru Terang) */
+  --icon-color: #2563eb; /* Warna blue-600 */
+}
+
+/* Resep untuk Dark Mode (Kita cover dua kemungkinan cara JS-nya bekerja) */
+.dark #main-footer,
+body.dark-mode #main-footer {
+  --text-color: #f9fafb; /* Warna gray-50 (Putih Cerah) */
+  --link-color: #60a5fa; /* Warna blue-400 (Biru Lebih Cerah) */
+  --icon-color: #60a5fa; /* Warna blue-400 */
+}
+
+/* --- Terapkan Resep ke Elemen (Pakai !important biar jadi bos) --- */
+/* Atur warna default untuk semua teks di dalam footer */
+#main-footer {
+  color: var(--text-color) !important;
+}
+
+/* Atur warna judul & teks tebal di dalam footer */
+#main-footer h2,
+#main-footer .font-bold {
+  color: var(--text-color) !important;
+}
+
+/* Atur warna link di dalam footer */
+#main-footer a {
+  color: var(--text-color) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+#main-footer a:hover {
+  color: var(--link-color) !important;
+}
+
+/* Atur warna ikon di dalam footer */
+#main-footer i {
+  color: var(--icon-color) !important;
+}
+
+/* Atur warna teks copyright yang kecil di paling bawah */
+#main-footer .text-xs {
+  color: var(--text-color) !important;
+  opacity: 0.7; /* Dibuat sedikit transparan biar gak terlalu nonjol */
+}
+
+/* ==== Fix Aspect Ratio Jenis Layanan (16:9) ==== */
+.layanan-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Terapkan 16:9 untuk gambar pada kartu layanan */
+.service-image {
+  height: auto; /* override tinggi tetap biar mengikuti rasio gambar */
+  overflow: hidden;
+}
+.service-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penjelasan SPM - Posyandu Mina</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Product Sans", "sans-serif"], // Default font
+            },
+            colors: {
+              "logo-blue": "#00BFFF", // 1. Biru
+              "logo-orange": "#FFA500", // 2. Oranye
+              "logo-pink": "#F900C6", // 3. Pink/Magenta
+              "logo-green": "#32CD32", // 4. Ijo
+              "logo-purple": "#9B30FF", // 5. Ungu (Bonus)
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 min-h-screen">
+    <header class="bg-logo-blue text-white p-4 flex items-center shadow-lg">
+      <div class="flex-1">
+        <a
+          href="/"
+          class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium"
+        >
+          ← Kembali
+        </a>
+      </div>
+      <div class="flex-1 text-center">
+        <h1 class="font-bold text-xl text-black">
+          <span class="sm:hidden">Info Layanan</span>
+          <span class="hidden sm:inline">Standar Pelayanan Minimal</span>
+        </h1>
+      </div>
+      <div class="flex-1"></div>
+    </header>
+
+    <main class="container mx-auto py-10 px-4 max-w-5xl">
+      <article class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl">
+        <img
+          src="../../assets/images/1.png"
+          alt="Banner Penjelasan"
+          class="w-full h-auto rounded-lg mb-8 shadow-lg"
+        />
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-logo-orange">
+          Standar Pelayanan: Pendidikan
+        </h2>
+
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Posyandu (Pos Pelayanan Terpadu) telah lama dikenal sebagai garda terdepan layanan kesehatan dasar, berfokus pada kesehatan ibu dan anak, gizi, dan imunisasi. Namun, sesuai dengan mandat baru dalam implementasi Standar Pelayanan Minimal (SPM) Pendidikan, peran Posyandu kini diperluas. Kami ditugaskan untuk mendukung Pendidikan Anak Usia Dini (PAUD) dan penguatan Literasi Warga.
+          Mandat ini tidak berarti Posyandu berubah menjadi lembaga PAUD formal. Peran kami adalah sebagai pusat intervensi dan stimulasi dini yang terintegrasi dengan layanan kesehatan.
+Posyandu adalah satu-satunya institusi yang secara rutin (idealnya sebulan sekali) menjangkau hampir seluruh anak usia 0-5 tahun. Ini adalah golden period (usia emas) perkembangan otak. Mengintegrasikan layanan stimulasi perkembangan dengan pemantauan kesehatan (penimbangan/imunisasi) adalah langkah strategis untuk memastikan tidak ada anak yang tertinggal.
+
+        </p>
+
+        <h3 class="text-2xl font-bold mb-3 text-gray-800">Fokus Layanan Pendidikan</h3>
+
+        <ul class="space-y-3 mb-6 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Deteksi Dini: Kader dilatih untuk tidak hanya menimbang berat dan mengukur tinggi badan, tetapi juga melakukan skrining perkembangan dasar menggunakan instrumen seperti KPSP (Kuesioner Pra Skrining Perkembangan).</span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Stimulasi: Selama hari buka Posyandu, kader menyediakan area dan aktivitas bermain sederhana yang merangsang aspek kognitif, motorik, dan sosial-emosional anak menggunakan Alat Peraga Edukasi (APE).</span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Edukasi Orang Tua: Kader memberikan penyuluhan kepada orang tua tentang pentingnya stimulasi di rumah dan praktik pola asuh positif.
+              </span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Rujukan: Jika ditemukan dugaan keterlambatan perkembangan, Posyandu menjadi pintu pertama untuk merujuk anak ke Bidan Desa atau Puskesmas guna penanganan lebih lanjut.
+              </span
+            >
+          </li>
+        </ul>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Jika ada pertanyaan lebih lanjut atau menemukan pelayanan yang tidak
+          sesuai standar, silakan sampaikan pengaduan Anda melalui tombol di
+          bawah ini.
+        </p>
+
+        <div class="text-center">
+          <a
+            href="/pengaduan"
+            class="inline-block bg-logo-green text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-80 transition-all shadow-lg"
+          >
+            Kirim Pengaduan
+          </a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

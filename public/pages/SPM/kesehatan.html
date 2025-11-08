@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SPM - Pendidikan - Posyandu Mina</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Product Sans", "sans-serif"],
+            },
+            colors: {
+              "logo-blue": "#00BFFF",
+              "logo-orange": "#FFA500",
+              "logo-pink": "#F900C6",
+              "logo-green": "#32CD32",
+              "logo-purple": "#9B30FF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 min-h-screen">
+    <header class="bg-logo-orange text-white p-4 flex items-center shadow-lg">
+      <div class="flex-1">
+        <a
+          href="/"
+          class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium"
+        >
+          ← Kembali
+        </a>
+      </div>
+      <div class="flex-1 text-center">
+        <h1 class="font-bold text-xl text-black">
+          <span class="sm:hidden">Info Layanan</span>
+          <span class="hidden sm:inline">Standar Pelayanan Minimal</span>
+        </h1>
+      </div>
+      <div class="flex-1"></div>
+    </header>
+
+    <main class="container mx-auto py-10 px-4 max-w-5xl">
+      <article class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl">
+        <img
+          src="../../assets/images/2.png"
+          alt="Banner Pendidikan"
+          class="w-full h-auto rounded-lg mb-8 shadow-lg"
+        />
+
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-logo-orange">
+          Standar Pelayanan: Kesehatan
+        </h2>
+
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          Standar Pelayanan Minimal (SPM) bidang kesehatan di Posyandu mencakup layanan komprehensif yang melayani seluruh siklus kehidupan, mulai dari ibu hamil, bayi, balita, remaja, dewasa hingga lanjut usia. Pelaksanaannya diawali dengan penggerakan kunjungan Posyandu agar semua kelompok sasaran aktif berpartisipasi melalui sosialisasi dan ajakan langsung yang menumbuhkan kesadaran pentingnya pemeriksaan kesehatan preventif. Selanjutnya dilakukan penyuluhan kesehatan dan gizi sesuai tahap kehidupan, seperti edukasi 1000 HPK dan pencegahan stunting bagi ibu dan balita, kesehatan reproduksi dan anemia bagi remaja, serta PHBS dan pencegahan penyakit tidak menular bagi dewasa dan lansia. Posyandu juga melaksanakan deteksi dini risiko masalah kesehatan melalui pemeriksaan dasar seperti penimbangan, pengukuran tekanan darah, gula darah, dan lingkar perut untuk menemukan gangguan sejak awal. Hasil deteksi tersebut ditindaklanjuti dengan rujukan ke fasilitas kesehatan formal seperti bidan desa atau puskesmas agar mendapatkan penanganan medis yang tepat. Setelah itu, kader Posyandu berperan dalam pemantauan perilaku keluarga, memastikan kepatuhan terhadap pengobatan penyakit kronis, imunisasi, pemeriksaan kehamilan, serta penerapan PHBS di rumah tangga. Keseluruhan kegiatan ini bertujuan untuk meningkatkan derajat kesehatan masyarakat melalui pelayanan yang berkesinambungan, partisipatif, dan mencakup seluruh tahapan kehidupan.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-3 text-gray-800">
+          Fokus Layanan Kesehatan
+        </h3>
+
+        <ul class="space-y-3 mb-6 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Penggerakan kunjungan Posyandu bagi sasaran ibu, bayi, balita, anak usia pra sekolah, usia sekolah remaja, dewasa dan lanjut usia</span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Penyuluhan kesehatan dan gizi ibu, bayi, balita, anak usia pra sekolah, usia sekolah remaja, dewasa dan lanjut usia
+              </span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            
+            Rujukan ke unit kesehatan Desa/Kelurahan atau pusat kesehatan masyarakat bagi ibu, bayi, balita, usia pra sekolah, usia sekolah remaja, dewasa dan lanjut usia yang memiliki resiko masalah kesehatan</span>
+            
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            
+            Pemantauan perilaku kepatuhan keluarga mendapatkan pelayanan kesehatan minimal, melaksanakan pengobatan hipertensi, diabetes, tuberculosis dan gangguan jiwa, serta menjaga kesehatan lingkungan rumah</span>
+            
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            
+              Deteksi dini resiko masalah kesehatan ibu, bayi, balita, usia pra sekolah, usia sekolah remaja, dewasa dan lanjut usia</span>
+            
+          </li>
+        </ul>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Jika ada pertanyaan lebih lanjut atau menemukan pelayanan yang tidak
+          sesuai standar, silakan sampaikan pengaduan Anda melalui tombol di
+          bawah ini.
+        </p>
+
+        <div class="text-center">
+          <a
+            href="/pengaduan"
+            class="inline-block bg-logo-green text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-80 transition-all shadow-lg"
+          >
+            Kirim Pengaduan
+          </a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

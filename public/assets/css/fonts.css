@@ -1,0 +1,90 @@
+/* ======================================================
+  File: fonts.css
+  ======================================================
+  
+  PASTIKAN GANTI '/assets/fonts/' DI BAWAH INI
+  SESUAI LOKASI FOLDER FONT LO!
+*/
+
+/* --- Thin (100) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* --- Light (300) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* --- Regular (400) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* --- Medium (500) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* --- Bold (700) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* --- Black (900) --- */
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("/assets/fonts/ProductSans-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}

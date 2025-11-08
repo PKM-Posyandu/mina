@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SPM - Pendidikan - Posyandu Mina</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Product Sans", "sans-serif"],
+            },
+            colors: {
+              "logo-blue": "#00BFFF",
+              "logo-orange": "#FFA500",
+              "logo-pink": "#F900C6",
+              "logo-green": "#32CD32",
+              "logo-purple": "#9B30FF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 min-h-screen">
+    <header class="bg-logo-green text-white p-4 flex items-center shadow-lg">
+      <div class="flex-1">
+        <a
+          href="/"
+          class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium"
+        >
+          ← Kembali
+        </a>
+      </div>
+      <div class="flex-1 text-center">
+        <h1 class="font-bold text-xl text-black">
+          <span class="sm:hidden">Info Layanan</span>
+          <span class="hidden sm:inline">Standar Pelayanan Minimal</span>
+        </h1>
+      </div>
+      <div class="flex-1"></div>
+    </header>
+
+    <main class="container mx-auto py-10 px-4 max-w-5xl">
+      <article class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl">
+        <img
+          src="../../assets/images/4.png"
+          alt="Banner Pendidikan"
+          class="w-full h-auto rounded-lg mb-8 shadow-lg"
+        />
+
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-logo-orange">
+          Standar Pelayanan: Perumahan Rakyat
+        </h2>
+
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+          SPM bidang perumahan menekankan hak setiap warga negara untuk tinggal di rumah yang layak, aman, dan sehat. Pemerintah daerah wajib mengidentifikasi rumah tidak layak huni dan membantu peningkatannya melalui program perbaikan.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-3 text-gray-800">
+          Fokus Layanan Perumahan Rakyat
+        </h3>
+
+        <ul class="space-y-3 mb-6 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Pendataan Rumah Tidak Layak Huni (RTLH):
+              Kader desa melakukan identifikasi kondisi rumah berdasarkan kriteria struktur bangunan, ventilasi, atap, lantai, dan sanitasi.
+              </span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Penyusunan Prioritas Bantuan:
+              Data RTLH digunakan untuk menentukan penerima bantuan program perumahan, baik dari Dana Desa, APBD, atau program nasional seperti BSPS (Bantuan Stimulan Perumahan Swadaya).
+              </span
+            >
+          </li>
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Pendampingan Pelaksanaan Rehabilitasi:
+              Kader ikut memantau proses pembangunan agar sesuai standar teknis dan bantuan tepat sasaran.
+              </span>
+          </li>
+
+          <li class="flex items-start">
+            <span class="text-logo-green font-bold text-xl mr-2">•</span>
+            <span
+              >Edukasi Kesehatan Hunian:
+              Memberikan penyuluhan tentang pentingnya ventilasi, pencahayaan, dan kebersihan rumah untuk mencegah penyakit seperti ISPA dan TBC.
+              </span>
+          </li>
+        </ul>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Jika ada pertanyaan lebih lanjut atau menemukan pelayanan yang tidak
+          sesuai standar, silakan sampaikan pengaduan Anda melalui tombol di
+          bawah ini.
+        </p>
+
+        <div class="text-center">
+          <a
+            href="/pengaduan"
+            class="inline-block bg-logo-green text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-80 transition-all shadow-lg"
+          >
+            Kirim Pengaduan
+          </a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
