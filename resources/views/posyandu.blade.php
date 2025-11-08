@@ -449,11 +449,7 @@
             <p>Jl. Mina Raya 2 Blok Mina, Kelurahan Panunggangan Barat, Kecamatan Cibodas, Kota Tangerang</p>
           </div>
 
-          <!-- Admin Login -->
-          <div class="md:text-right">
-            <h3 class="text-lg font-semibold mb-3">Admin</h3>
-            <a href="{{ route('login') }}" class="btn-primary">Admin Login</a>
-          </div>
+          
 
         </div>
 
