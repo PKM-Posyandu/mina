@@ -143,8 +143,8 @@
         >
           <div class="w-full h-96 flex-shrink-0">
             <img
-              src="{{ asset('assets/images/rame sehat.jpg') }}"
-              alt="Foto 1"
+              src="{{ asset('assets/images/header-mina.jpg') }}"
+              alt="Header Posyandu Mina"
               class="w-full h-full object-cover"
             />
           </div>
