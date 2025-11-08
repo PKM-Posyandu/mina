@@ -423,36 +423,37 @@
       </section>
     </main>
 
-      <footer id="main-footer" class="bg-white text-gray-800 py-10 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <footer id="main-footer" class="bg-white text-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- KIRI -->
           <div>
             <h3 class="text-lg font-semibold mb-3">Kontak</h3>
-            <p>
-              Telp:
-              <a href="tel:081234567890" class="underline">0812-3456-7890</a>
-            </p>
-            <p>
-              Email:
-              <a href="mailto:info@inovasikampus.id" class="underline">info@inovasikampus.id</a>
-            </p>
+            <p>Telp: +62 812-5111-6001 (Admin)</p>
+            <p>Email: sipandumina@gmail.com </p>
           </div>
 
           <!-- TENGAH (Ikuti Kami) -->
-          <div>
+          <div class="text-center">
             <h3 class="text-lg font-semibold mb-3">Ikuti Kami</h3>
-            <div class="flex justify-center md:justify-start gap-4 text-xl">
-              <a href="#" aria-label="TikTok" class="hover:text-gray-600"><i class="fa-brands fa-tiktok"></i></a>
-              <a href="#" aria-label="Instagram" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube" class="hover:text-gray-600"><i class="fa-brands fa-youtube"></i></a>
+            <div class="flex justify-center gap-4 text-xl">
+              <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://wa.me/6281251116001" class="hover:text-gray-600"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
 
           <!-- KANAN (Alamat) -->
-          <div>
+          <div class="text-right">
             <h3 class="text-lg font-semibold mb-3">Alamat</h3>
             <p>Jl. Mina Raya 2 Blok Mina, Kelurahan Panunggangan Barat, Kecamatan Cibodas, Kota Tangerang</p>
+            <p class="flex items-center justify-center md:justify-end">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-300"></i>
+                <a
+                  href="https://maps.app.goo.gl/posyandu-mina-link"
+                  target="_blank"
+                  class="hover:underline"
+                  >Lihat di Google Maps</a>
+              </p>
           </div>
 
           
@@ -460,6 +461,7 @@
         </div>
 
         <div class="text-center mt-10 text-sm text-gray-500">
+          © 2025 Posyandu Mina | Teknik Informatika Universitas Pamulang
           © 2025 Inovasi Kampus. All rights reserved.
         </div>
       </footer>
