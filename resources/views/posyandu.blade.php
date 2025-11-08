@@ -423,28 +423,34 @@
       </section>
     </main>
 
-      <footer class="bg-white text-gray-800 py-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+      <footer id="main-footer" class="bg-white text-gray-800 py-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           
           <!-- KIRI -->
           <div>
             <h3 class="text-lg font-semibold mb-3">Kontak</h3>
-            <p>Telp: 0812-3456-7890</p>
-            <p>Email: info@inovasikampus.id</p>
+            <p>
+              Telp:
+              <a href="tel:081234567890" class="underline">0812-3456-7890</a>
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@inovasikampus.id" class="underline">info@inovasikampus.id</a>
+            </p>
           </div>
 
           <!-- TENGAH (Ikuti Kami) -->
           <div>
             <h3 class="text-lg font-semibold mb-3">Ikuti Kami</h3>
             <div class="flex justify-center md:justify-start gap-4 text-xl">
-              <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-tiktok"></i></a>
-              <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" aria-label="TikTok" class="hover:text-gray-600"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" aria-label="Instagram" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" class="hover:text-gray-600"><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
 
           <!-- KANAN (Alamat) -->
-          <div class="md:text-right">
+          <div>
             <h3 class="text-lg font-semibold mb-3">Alamat</h3>
             <p>Jl. Mina Raya 2 Blok Mina, Kelurahan Panunggangan Barat, Kecamatan Cibodas, Kota Tangerang</p>
           </div>
