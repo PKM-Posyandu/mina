@@ -215,7 +215,7 @@
           </div>
           <div class="w-full md:w-1/2 text-center md:text-left">
             <h2 class="section-title">Tentang Posyandu Mina</h2>
-            <p class="section-text text-gray-700">
+            <p class="section-text text-gray-900">
               <strong>Posyandu ILP Mina RW 012</strong> merupakan pusat
               pelayanan kesehatan masyarakat yang berada di
               <em
@@ -437,7 +437,7 @@
           <div class="text-center">
             <h3 class="text-lg font-semibold mb-3">Ikuti Kami</h3>
             <div class="flex justify-center gap-4 text-xl">
-              <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/posyandu.mina" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
               <a href="https://wa.me/6281251116001" class="hover:text-gray-600"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
@@ -449,7 +449,7 @@
             <p class="flex items-center justify-center md:justify-end">
                 <i class="fas fa-map-marker-alt mr-2 text-blue-300"></i>
                 <a
-                  href="https://maps.app.goo.gl/posyandu-mina-link"
+                  href="https://maps.app.goo.gl/nUcnFhVRrmYprBzL7?g_st=iw"
                   target="_blank"
                   class="hover:underline"
                   >Lihat di Google Maps</a>
@@ -460,13 +460,12 @@
 
         </div>
 
-        <div class="text-center mt-10 text-sm text-gray-500">
-          © 2025 Posyandu Mina | Teknik Informatika Universitas Pamulang
-          © 2025 Inovasi Kampus. All rights reserved.
-        </div>
+        <div class="text-center mt-10 text-sm text-gray-500">&copy; 2025 Posyandu Mina | Teknik Informatika Universitas Pamulang</div>
       </footer>
 
 
     <script src="{{ asset('assets/js/posyandu.js') }}"></script>
   </body>
 </html>
+
+
