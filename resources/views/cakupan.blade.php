@@ -6,6 +6,7 @@
     <title>Cakupan Posyandu Mina</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   </head>
   <body class="bg-white text-gray-900">
     <div class="max-w-6xl mx-auto px-6 py-10">
@@ -16,7 +17,15 @@
 
       @php
         $labels = $data['labels'] ?? [];
-        $series = $data['series'] ?? [];
+        // Backward compatibility: allow old shape where series[cat] = [values]
+        $rawSeries = $data['series'] ?? [];
+        $series = [];
+        foreach($rawSeries as $cat => $value){
+          if(is_array($value)){
+            $isAssoc = array_keys($value) !== range(0, count($value) - 1);
+            $series[$cat] = $isAssoc ? $value : ['Nilai' => $value];
+          }
+        }
         $categories = [
           'Imunisasi Dasar',
           'ASI Eksklusif',
@@ -53,23 +62,42 @@
         return palette[i % palette.length];
       }
 
+      const horizontalCats = new Set(['Imunisasi Dasar','ASI Eksklusif']);
       cats.forEach((cat, i) => {
         const ctx = document.getElementById('chart'+i);
         if(!ctx) return;
-        const data = (series && series[cat]) ? series[cat] : [];
+        const catSeries = (series && series[cat]) ? series[cat] : {};
+        const datasets = [];
+        let idx = 0;
+        for (const [name, values] of Object.entries(catSeries)) {
+          datasets.push({
+            label: name,
+            data: values,
+            backgroundColor: color(idx++),
+            borderWidth: 0
+          });
+        }
+        if (datasets.length === 0) {
+          datasets.push({ label: cat, data: [], backgroundColor: color(0) });
+        }
         new Chart(ctx, {
           type: 'bar',
           data: {
             labels: labels,
-            datasets: [{
-              label: cat,
-              data: data,
-              backgroundColor: color(i),
-            }]
+            datasets: datasets
           },
           options: {
             responsive: true,
-            plugins: { legend: { display: false } },
+            indexAxis: horizontalCats.has(cat) ? 'y' : 'x',
+            plugins: {
+              legend: { display: true },
+              datalabels: {
+                anchor: 'end',
+                align: 'end',
+                color: '#6b7280',
+                formatter: (v) => (v==null? '': v)
+              }
+            },
             scales: {
               y: { beginAtZero: true, ticks: { stepSize: 10 } }
             }
@@ -79,4 +107,3 @@
     </script>
   </body>
   </html>
-

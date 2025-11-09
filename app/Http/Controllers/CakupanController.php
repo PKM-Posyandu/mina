@@ -34,28 +34,38 @@ class CakupanController extends Controller
         }
 
         $sheet = $array[0];
-        // Expect: Row 1 header: Category | Col2..n labels (bulan/periode)
-        // Row 2..: category name + angka per kolom
+        // New expected format (supports multiple metrics per category):
+        // Row 1 header: Kategori | Metrik | Label1 | Label2 | ...
+        // Row 2..: category name | metric name | angka per label ...
+        // Backward compatible with old format (Kategori | Label1..n)
+
         $headers = array_map(fn($h) => trim((string)$h), $sheet[0] ?? []);
         if (count($headers) < 2) {
-            return back()->withErrors(['file' => 'Header tidak valid. Pastikan kolom pertama kategori, kolom berikutnya label (bulan/periode).']);
+            return back()->withErrors(['file' => 'Header tidak valid. Minimal Kategori dan satu label.']);
         }
 
-        $labels = array_slice($headers, 1);
+        $hasMetricColumn = false;
+        if (isset($headers[1])) {
+            $second = mb_strtolower($headers[1]);
+            $hasMetricColumn = in_array($second, ['metric', 'metrik', 'indikator']);
+        }
+
+        $labels = $hasMetricColumn ? array_slice($headers, 2) : array_slice($headers, 1);
         $series = [];
         foreach (array_slice($sheet, 1) as $row) {
-            if (!isset($row[0]) || trim((string)$row[0]) === '') {
-                continue;
-            }
-            $name = trim((string)$row[0]);
+            if (!isset($row[0]) || trim((string)$row[0]) === '') continue;
+            $cat = trim((string)$row[0]);
+            $metric = $hasMetricColumn ? trim((string)($row[1] ?? 'Nilai')) : 'Nilai';
+            $startIdx = $hasMetricColumn ? 2 : 1;
+
             $values = [];
-            for ($i = 1; $i < count($row); $i++) {
+            for ($i = $startIdx; $i < count($row); $i++) {
                 $v = $row[$i];
                 $values[] = is_numeric($v) ? (float)$v : null;
             }
-            // Normalize length to labels
             $values = array_pad(array_slice($values, 0, count($labels)), count($labels), null);
-            $series[$name] = $values;
+            if (!isset($series[$cat])) $series[$cat] = [];
+            $series[$cat][$metric] = $values;
         }
 
         // Save structure
@@ -86,4 +96,3 @@ class CakupanController extends Controller
         return $data;
     }
 }
-

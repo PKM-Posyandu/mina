@@ -26,7 +26,11 @@
           <label for="file" class="form-label">File Excel (.xlsx/.xls/.csv)</label>
           <input type="file" name="file" id="file" class="form-control" required>
         </div>
-        <p class="small text-muted">Format yang diharapkan (sheet pertama): baris pertama header, kolom A = Kategori, kolom berikutnya = label (mis. bulan), baris selanjutnya = nilai. Contoh kategori yang didukung: Imunisasi Dasar, ASI Eksklusif, Pelayanan Kesehatan Balita, Pelayanan Kesehatan Lansia, Pelayanan Kesehatan Ibu Hamil, Pelayanan Kesehatan Akseptor Aktif KB.</p>
+        <p class="small text-muted">
+          Format (sheet pertama) untuk multi-metrik: Kolom A = <strong>Kategori</strong>, Kolom B = <strong>Metrik</strong> (mis. "Capaian", "Sasaran", "Hadir"), Kolom C dst = label (bulan/antigen). Baris berikutnya berisi angka per label. <br>
+          Contoh kategori: Imunisasi Dasar, ASI Eksklusif, Pelayanan Kesehatan Balita, Pelayanan Kesehatan Lansia, Pelayanan Kesehatan Ibu Hamil, Pelayanan Kesehatan Akseptor Aktif KB. <br>
+          Unduh template CSV: <a href="{{ asset('assets/samples/cakupan-template.csv') }}" target="_blank">cakupan-template.csv</a>
+        </p>
         <button class="btn btn-primary">Import</button>
         <a class="btn btn-outline-secondary" href="{{ route('cakupan') }}" target="_blank">Lihat Halaman Cakupan</a>
       </form>
@@ -70,4 +74,3 @@
   </div>
 </div>
 @endsection
-
