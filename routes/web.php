@@ -6,8 +6,12 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\FrontendController; // Import FrontendController
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CakupanController;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home'); // Update root route
+
+// Public coverage charts
+Route::get('/cakupan', [CakupanController::class, 'showPublic'])->name('cakupan');
 
 // Authentication Routes
 Route::middleware('guest')->group(function () {
@@ -34,6 +38,9 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
         return view('dashboard');
     })->name('dashboard');
     Route::get('/chart-data', [ComplaintController::class, 'chartData'])->name('complaints.chartData');
+    // Cakupan management
+    Route::get('/cakupan', [CakupanController::class, 'showDashboard'])->name('cakupan.dashboard');
+    Route::post('/cakupan/import', [CakupanController::class, 'import'])->name('cakupan.import');
     // Complaint Management
     Route::get('/complaints', [ComplaintController::class, 'index'])->name('complaints.index');
     Route::get('/complaints/export/pdf', [ComplaintController::class, 'exportPdf'])->name('complaints.export.pdf');

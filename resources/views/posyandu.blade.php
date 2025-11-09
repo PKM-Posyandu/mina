@@ -246,6 +246,12 @@
             >
               Lihat Inovasi
             </a>
+            <a
+              href="/cakupan"
+              class="btn-primary ml-3"
+            >
+              Lihat Cakupan
+            </a>
           </div>
           </div>
         </div>
