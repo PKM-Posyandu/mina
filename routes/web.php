@@ -6,7 +6,6 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\FrontendController; // Import FrontendController
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\CakupanController;
 use App\Http\Controllers\Admin\CakupanController as AdminCakupanController;
 use App\Http\Controllers\Front\CakupanController as FrontCakupanController;
 
@@ -37,23 +36,24 @@ Route::get('/pengaduan', [ComplaintController::class, 'create'])->name('complain
 
 Route::redirect('/admin', '/dashboard');
 
-Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+Route::middleware(['auth', 'admin.access'])->prefix('dashboard')->group(function () {
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
     Route::get('/chart-data', [ComplaintController::class, 'chartData'])->name('complaints.chartData');
-    // Cakupan management
-    Route::get('/cakupan', [CakupanController::class, 'showDashboard'])->name('cakupan.dashboard');
-    Route::post('/cakupan/import', [CakupanController::class, 'import'])->name('cakupan.import');
     // Complaint Management
     Route::get('/complaints', [ComplaintController::class, 'index'])->name('complaints.index');
     Route::get('/complaints/export/pdf', [ComplaintController::class, 'exportPdf'])->name('complaints.export.pdf');
     Route::get('/complaints/export/excel', [ComplaintController::class, 'exportExcel'])->name('complaints.export.excel');
+    Route::patch('/complaints/{complaint}/status', [ComplaintController::class, 'updateStatus'])->name('complaints.updateStatus');
 
     // Gallery Management
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
     Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+    // Cakupan upload (admin)
+    Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
+    Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
 });
 
 // Admin routes for cakupan upload (protected)

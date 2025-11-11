@@ -30,6 +30,15 @@ class ComplaintController extends Controller
             'complaintsPerCategory' => $complaintsPerCategory,
         ]);
     }
+
+    public function updateStatus(Request $request, Complaint $complaint)
+    {
+        $complaint->update([
+            'is_resolved' => $request->boolean('is_resolved')
+        ]);
+
+        return redirect()->back()->with('status', 'Status pengaduan diperbarui.');
+    }
     public function index(Request $request)
     {
         $query = Complaint::query();

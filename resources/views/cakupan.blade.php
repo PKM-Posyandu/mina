@@ -11,7 +11,7 @@
   <div class="max-w-5xl mx-auto px-6 py-10">
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold">Cakupan: {{ $kategori }}</h1>
-      <a href="/" class="text-blue-600 hover:underline">← Kembali</a>
+      <a href="{{ route('cakupan.index') }}" class="text-blue-600 hover:underline">← Kembali</a>
     </div>
 
     <div class="bg-white rounded-lg shadow p-4">
