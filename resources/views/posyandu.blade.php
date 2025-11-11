@@ -67,6 +67,21 @@
               class="text-gray-900 hover:text-blue-600"
               >Jadwal</a
             >
+
+            <div class="relative group">
+              <a class="text-gray-900 hover:text-blue-600 inline-flex items-center">
+                Menu
+                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+
+              <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                <a href="pages/inovasi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Inovasi</a>
+                <a href="/cakupan" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cakupan</a>
+                <a href="https://form.jotform.com/252012498192052" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white" target="_blank">Daftar Sekarang</a>
+              </div>
+            </div>
           </div>
           <input
             type="text"
@@ -239,20 +254,7 @@
               modern, mudah diakses, dan menyentuh seluruh warga.
             </p>
 
-          <div class="mt-8" align="center">
-            <a
-              href="pages/inovasi.html"
-              class="btn-primary"
-            >
-              Lihat Inovasi
-            </a>
-            <a
-              href="/cakupan"
-              class="btn-primary ml-3"
-            >
-              Lihat Cakupan
-            </a>
-          </div>
+          
           </div>
         </div>
       </section>
@@ -278,7 +280,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="service-title">Ibu Hamil</h3>
+              <h3 class="service-title">Ibu Hamil dan Nifas</h3>
             </a>
 
             <a href="pages/layanan/remaja.html" class="service-card block">
@@ -288,7 +290,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="service-title">Remaja</h3>
+              <h3 class="service-title">Anak Sekolah dan Remaja</h3>
             </a>
 
             <a href="pages/layanan/lansia.html" class="service-card block">
@@ -298,7 +300,7 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="service-title">Lansia</h3>
+              <h3 class="service-title">Usia Produktif dan Lansia</h3>
             </a>
           </div>
         </div>
@@ -350,50 +352,30 @@
 
       <section id="spm" class="py-12 bg-white">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="section-title text-center mb-10">
-            Standar Pelayanan Minimal (SPM)
-          </h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <a
-              href="/pages/SPM/pendidikan.html"
-              class="bg-cyan-500 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Pendidikan
+          <h2 class="section-title text-center mb-10">Standar Pelayanan Minimal (SPM)</h2>
+          <div class="grid grid-cols-6 gap-8 justify-center items-center mx-auto w-fit">
+            <a href="pages/SPM/pendidikan.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Pendidikan.png') }}" alt="Ikon Pendidikan" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a
-              href="/pages/SPM/kesehatan.html"
-              class="bg-orange-400 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Kesehatan
+            <a href="pages/SPM/kesehatan.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Kesehatann.png') }}" alt="Ikon Kesehatan" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a
-              href="/pages/SPM/pekerjaan_umum.html"
-              class="bg-pink-400 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Pekerjaan Umum
+            <a href="pages/SPM/pekerjaan_umum.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Pekerjaan_Umum.png') }}" alt="Ikon Pekerjaan Umum" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a
-              href="/pages/SPM/perumahan_rakyat.html"
-              class="bg-green-500 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Perumahan Rakyat
+            <a href="pages/SPM/perumahan_rakyat.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Perumahan_Rakyat.png') }}" alt="Ikon Perumahan Rakyat" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a
-              href="/pages/SPM/trantibunlinmas.html"
-              class="bg-cyan-500 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Trantibunlinmas
+            <a href="pages/SPM/trantibunlinmas.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Trantibunlinmas.png') }}" alt="Ikon Trantibunlinmas" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a
-              href="/pages/SPM/sosial.html"
-              class="bg-orange-400 h-24 flex items-center justify-center text-white font-bold rounded-lg shadow-md transform transition duration-300 hover:scale-110 hover:shadow-2xl p-2"
-            >
-              Sosial
+            <a href="pages/SPM/sosial.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+              <img src="{{ asset('assets/images/Sosial.png') }}" alt="Ikon Sosial" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
           </div>
         </div>
