@@ -14,5 +14,6 @@ class Complaint extends Model
         'alamat_lengkap',
         'rt',
         'bukti',
+        'is_resolved',
     ];
 }
