@@ -55,3 +55,9 @@ Route::middleware(['auth', 'admin.access'])->prefix('dashboard')->group(function
     Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
     Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
 });
+
+// Admin routes for cakupan upload (protected)
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
+    Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
+});
