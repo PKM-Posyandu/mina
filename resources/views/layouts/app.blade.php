@@ -34,6 +34,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('gallery.index') }}">Manajemen Galeri Kegiatan</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.cakupan.upload') }}">Manajemen Cakupan</a>
+                </li>
+                
+                
             </ul>
             <hr>
             <form method="POST" action="{{ route('logout') }}">
@@ -65,6 +70,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('gallery.index') }}">Manajemen Galeri Kegiatan</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.cakupan.upload') }}">Manajemen Cakupan</a>
+                </li>
+                
+                
             </ul>
             <hr>
             <form method="POST" action="{{ route('logout') }}">

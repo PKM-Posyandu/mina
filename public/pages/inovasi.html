@@ -1,139 +1,114 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inovasi & Cakupan Posyandu Mina</title>
 
-    <link rel="stylesheet" href="fonts.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu: Inovasi Posyandu Mina</title>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Product Sans", "sans-serif"],
-            },
-            colors: {
-              "logo-blue": "#00BFFF",
-              "logo-orange": "#FFA500",
-              "logo-pink": "#F900C6",
-              "logo-green": "#32CD32",
-              "logo-purple": "#9B30FF",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <body class="bg-gray-100 text-gray-900 min-h-screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../assets/css/posyandu.css" />
+</head>
 
-    <!-- HEADER -->
-    <header class="bg-logo-blue text-white p-4 flex items-center shadow-lg">
-      <div class="flex-1">
-        <a href="/" class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium">⬅ Kembali</a>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <!-- Menggunakan relative pada parent dan absolute pada tombol 'kembali' agar judul tetap benar-benar di tengah -->
+  <header class="bg-[#67E8F9] py-4 px-6 flex items-center relative shadow-sm shrink-0">
+    <div class="flex-1">
+      <a href="/" class="bg-white/50 text-black px-3 py-1 rounded hover:bg-white transition font-medium">
+        ←Kembali
+      </a>
+    </div>
+    <h1 class="text-2xl font-semibold text-gray-900 w-full text-center">
+      INOVASI
+    </h1>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow w-full px-4 md:px-8 py-8 space-y-12">
+
+    <!-- Row 1 -->
+    <section>
+      <img src="/assets/images/1.png" alt="Ilustrasi Delta Force 1"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+    <!-- Row 2 -->
+    <section>
+      <img src="/assets/images/2.png" alt="Ilustrasi Delta Force 2"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+    <!-- Row 3 -->
+    <section>
+      <img src="/assets/images/3.png" alt="Ilustrasi Delta Force 3"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+    <!-- Row 4 -->
+    <section>
+      <img src="/assets/images/4.png" alt="Ilustrasi Delta Force 4"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+    <!-- Row 5 -->
+    <section>
+      <img src="/assets/images/5.png" alt="Ilustrasi Delta Force 5"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+    <!-- Row 6 -->
+    <section>
+      <img src="/assets/images/6.png" alt="Ilustrasi Delta Force 6"
+        class="w-full h-auto object-cover rounded-lg shadow-md">
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-gray-800 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- KIRI -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Kontak</h3>
+        <p>Telp: +62 812-5111-6001 (Admin)</p>
+        <p>Email: sipandumina@gmail.com </p>
       </div>
-      <div class="flex-1 text-center">
-        <h1 class="font-bold text-xl text-black">
-          <span class="sm:hidden">Inovasi Posyandu</span>
-          <span class="hidden sm:inline">Inovasi & Cakupan Posyandu Mina</span>
-        </h1>
-      </div>
-      <div class="flex-1"></div>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="container mx-auto py-14 px-4 max-w-5xl">
-      <h2 class="text-3xl font-bold text-center mb-8 text-logo-orange">Daftar Inovasi & Cakupan</h2>
-      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-        Berikut adalah beberapa inovasi yang dikembangkan Posyandu Mina dalam meningkatkan pelayanan kepada masyarakat, serta cakupan manfaat yang diberikan.
-      </p>
-
-      <!-- LIST STYLE: Alternating image + text -->
-      <div class="space-y-12">
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/Posyandu-Final.webp" alt="SIPANDU" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">1. SIPANDU (Sistem Reservasi Posyandu)</h3>
-            <p class="leading-relaxed">Diciptakan oleh kader Posyandu Mina untuk mempermudah warga melakukan pendaftaran secara online. Aplikasi ini mengurangi antrean di lokasi Posyandu dengan sistem reservasi daring. Barcode aplikasi tersedia dan digunakan untuk antrean lebih tertib.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse items-start gap-6">
-          <img src="../../assets/images/1.png" alt="GELORA LANSIA" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div class="md:text-left">
-            <h3 class="text-xl font-bold mb-2">2. GELORA LANSIA (Gerakan Olahraga Rawat Kesehatan Lansia)</h3>
-            <p class="leading-relaxed">Program aktivitas fisik untuk menjaga kesehatan lansia melalui kegiatan olahraga bersama secara rutin di lingkungan Posyandu.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/2.png" alt="SIJEMPOL LANSIA" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">3. SIJEMPOL LANSIA (Jemput Bola Pelayanan Lansia)</h3>
-            <p class="leading-relaxed">Program penjemputan lansia dari rumah menuju Posyandu untuk memudahkan memperoleh layanan kesehatan tanpa kesulitan transportasi.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse items-start gap-6">
-          <img src="../../assets/images/3.png" alt="SIGAP" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">4. SIGAP (Siaga Jemput Balita)</h3>
-            <p class="leading-relaxed">Program antar-jemput balita menggunakan mobil \"Odong-Odong\" hasil inovasi kader agar balita hadir ke Posyandu dengan aman dan nyaman.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/4.png" alt="KAPAS" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">5. KAPAS (Kado Pintar Anak Sehat)</h3>
-            <p class="leading-relaxed">Apresiasi berupa kado pintar bagi balita yang aktif datang ke Posyandu untuk meningkatkan partisipasi keluarga.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse items-start gap-6">
-          <img src="../../assets/images/5.png" alt="GERBANG GIZI MINA" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">6. GERBANG GIZI MINA</h3>
-            <p class="leading-relaxed">Pemberdayaan KWT dalam penyediaan dan pengolahan pangan bergizi untuk PMT balita Posyandu Mina.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/6.png" alt="1 RUMAH 1 JUMANTIK" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">7. INOVASI BARCODE 1 RUMAH 1 JUMANTIK</h3>
-            <p class="leading-relaxed">Digitalisasi pemantauan jentik dengan barcode di tiap rumah. Data dapat diakses kader secara langsung dan efisien.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse items-start gap-6">
-          <img src="../../assets/images/logo_lansia.jpg" alt="HERBAL STEAM THERAPY" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">8. HERBAL STEAM THERAPY</h3>
-            <p class="leading-relaxed">Terapi uap herbal bagi lansia untuk relaksasi dan menjaga kesehatan, memanfaatkan bahan herbal dari kebun TOGA KWT Mina.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/logo_penyuluhan_gizi.png" alt="MORINA LATTE DAN BONKERI" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">9. MORINA LATTE DAN BONKERI</h3>
-            <p class="leading-relaxed">Produk sehat berbahan daun kelor dan abon kelor ikan teri untuk dukung pencegahan stunting.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row-reverse items-start gap-6">
-          <img src="../../assets/images/posyandu.png" alt="DIGITALISASI KEBUN TOGA" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">10. DIGITALISASI KEBUN TOGA</h3>
-            <p class="leading-relaxed">Pemanfaatan QR code pada kebun TOGA. Pindai untuk mengetahui jenis tanaman dan manfaatnya.</p>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-start gap-6">
-          <img src="../../assets/images/logo_imunisasi.png" alt="SIBADU" class="w-full md:w-64 h-40 object-cover rounded-lg shadow" />
-          <div>
-            <h3 class="text-xl font-bold mb-2">11. SIBADU (Sisir Balita Tidak Hadir di Posyandu)</h3>
-            <p class="leading-relaxed">Kunjungan rumah oleh kader untuk menimbang berat badan, mengukur tinggi, lingkar kepala, dan lengan bayi/balita yang tidak hadir.</p>
-          </div>
+      <!-- TENGAH (Ikuti Kami) -->
+      <div class="text-center">
+        <h3 class="text-lg font-semibold mb-3">Ikuti Kami</h3>
+        <div class="flex justify-center gap-4 text-xl">
+          <a href="#" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/6281251116001" class="hover:text-gray-600"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
-    </main>
+      <!-- KANAN (Alamat) -->
+      <div class="text-right">
+        <h3 class="text-lg font-semibold mb-3">Alamat</h3>
+        <p>Jl. Mina Raya 2 Blok Mina, Kelurahan Panunggangan Barat, Kecamatan Cibodas, Kota Tangerang</p>
+        <p class="flex items-center justify-center md:justify-end">
+            <i class="fas fa-map-marker-alt mr-2 text-blue-300"></i>
+            <a
+              href="https://maps.app.goo.gl/nUcnFhVRrmYprBzL7?g_st=iw"
+              target="_blank"
+              class="hover:underline"
+              >Lihat di Google Maps</a>
+          </p>
+      </div>
+    </div>
 
-  </body>
-  </html>
+    <div class="text-center mt-10 text-sm text-gray-500">
+      © 2025 Posyandu Mina | Teknik Informatika Universitas Pamulang
+    </div>
+  </footer>
 
+</body>
+
+</html>

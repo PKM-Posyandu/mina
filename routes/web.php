@@ -7,11 +7,15 @@ use App\Http\Controllers\FrontendController; // Import FrontendController
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CakupanController;
+use App\Http\Controllers\Admin\CakupanController as AdminCakupanController;
+use App\Http\Controllers\Front\CakupanController as FrontCakupanController;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home'); // Update root route
 
 // Public coverage charts
-Route::get('/cakupan', [CakupanController::class, 'showPublic'])->name('cakupan');
+Route::get('/cakupan', [FrontCakupanController::class, 'index'])->name('cakupan.index');
+Route::get('/cakupan/{kategori}', [FrontCakupanController::class, 'show'])->name('cakupan.show');
+Route::get('/api/cakupan/{kategori}', [FrontCakupanController::class, 'api'])->name('cakupan.api');
 
 // Authentication Routes
 Route::middleware('guest')->group(function () {
@@ -50,4 +54,10 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
     Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+});
+
+// Admin routes for cakupan upload (protected)
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
+    Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
 });
