@@ -60,13 +60,18 @@ class SheetImport implements ToCollection, WithHeadingRow
 
                 $metrik = $this->formatMetrik($key);
 
-                IndikatorPosyandu::create([
-                    'kategori' => $this->kategori,
-                    'label' => $label,
-                    'metrik' => $metrik,
-                    'subkategori' => null,
-                    'nilai' => (int) round($value),
-                ]);
+                // Prevent duplicate rows by upserting on kategori+label+metrik
+                IndikatorPosyandu::updateOrCreate(
+                    [
+                        'kategori' => $this->kategori,
+                        'label' => $label,
+                        'metrik' => $metrik,
+                    ],
+                    [
+                        'subkategori' => null,
+                        'nilai' => (int) round($value),
+                    ]
+                );
             }
         }
     }

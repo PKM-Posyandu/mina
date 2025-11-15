@@ -62,6 +62,9 @@
                     <a class="nav-link {{ request()->routeIs('gallery.*') ? 'active' : '' }}" href="{{ route('gallery.index') }}">Manajemen Galeri Kegiatan</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('schedules.*') ? 'active' : '' }}" href="{{ route('schedules.index') }}">Manajemen Jadwal Posyandu</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('admin.cakupan.*') ? 'active' : '' }}" href="{{ route('admin.cakupan.upload') }}">Manajemen Cakupan</a>
                 </li>
                 
@@ -100,6 +103,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('gallery.*') ? 'active' : '' }}" href="{{ route('gallery.index') }}">Manajemen Galeri Kegiatan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('schedules.*') ? 'active' : '' }}" href="{{ route('schedules.index') }}">Manajemen Jadwal Posyandu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('admin.cakupan.*') ? 'active' : '' }}" href="{{ route('admin.cakupan.upload') }}">Manajemen Cakupan</a>

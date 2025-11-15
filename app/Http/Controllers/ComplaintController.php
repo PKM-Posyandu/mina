@@ -10,6 +10,10 @@ use Maatwebsite\Excel\Facades\Excel; // Assuming maatwebsite/excel package is in
 use App\Exports\ComplaintsExport; // We will create this export class later
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
+use App\Mail\ComplaintSubmitted;
 
 class ComplaintController extends Controller
 {
@@ -120,6 +124,28 @@ class ComplaintController extends Controller
 
         $complaint->save();
 
+        $recipient = config('mail.complaints_recipient');
+        if (!empty($recipient)) {
+            try {
+                Mail::to($recipient)->send(new ComplaintSubmitted($complaint));
+            } catch (\Throwable $e) {
+                Log::error('Gagal mengirim email pengaduan baru', [
+                    'complaint_id' => $complaint->id,
+                    'error' => $e->getMessage(),
+                ]);
+            }
+        }
+
         return redirect()->route('home')->with('success', 'Pengaduan Anda berhasil dikirim!');
+    }
+
+    public function showBukti(Complaint $complaint)
+    {
+        abort_if(empty($complaint->bukti), 404);
+
+        $disk = Storage::disk('public');
+        abort_if(! $disk->exists($complaint->bukti), 404);
+
+        return response()->file($disk->path($complaint->bukti));
     }
 }

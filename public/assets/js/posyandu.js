@@ -1,65 +1,22 @@
-/* === SCHEDULE DATA AND LOGIC (NEW) === */
-
-const SCHEDULE_TEMPLATES = [
-  {
-    title: "Skrining Usia Produktif & Lansia",
-    desc: "Cek tensi, gula darah, dan lingkar perut",
-    dayOrder: 1, // Sabtu Pertama (First Saturday)
-    time: "08:00 - 10:00 WIB",
-  },
-  {
-    title: "Pekan Imunisasi Polio",
-    desc: "Imunisasi serentak untuk balita",
-    dayOrder: 2, // Sabtu Kedua (Second Saturday)
-    time: "08:00 - 11:00 WIB",
-  },
-  {
-    title: "Penimbangan & Vitamin A",
-    desc: "Untuk semua balita terdaftar",
-    dayOrder: 3, // Sabtu Ketiga (Third Saturday)
-    time: "08:00 - 11:00 WIB",
-  },
-];
-
-/**
- * Menghitung tanggal N (dayOrder) dari hari tertentu (dayOfWeek: 0=Minggu, 6=Sabtu)
- * di bulan yang sedang berjalan.
- */
-function getDateForDayOrder(dayOfWeek, dayOrder) {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = date.getMonth();
-
-  let count = 0;
-  let resultDate = null;
-
-  for (let i = 1; i <= 31; i++) {
-    const d = new Date(year, month, i);
-    if (d.getMonth() !== month) break; // Sudah pindah bulan
-
-    // date.getDay() returns 0 for Sunday, 6 for Saturday
-    if (d.getDay() === dayOfWeek) {
-      count++;
-      if (count === dayOrder) {
-        resultDate = d;
-        break;
-      }
-    }
-  }
-  return resultDate;
-}
-
-/* === END SCHEDULE DATA AND LOGIC === */
-
 document.addEventListener("DOMContentLoaded", () => {
   /* ================= MOBILE MENU ================= */
   (function mobileMenuInit() {
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
-    if (!menuBtn || !mobileMenu) return;
-    menuBtn.addEventListener("click", () =>
-      mobileMenu.classList.toggle("hidden")
-    );
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
+
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) =>
+        link.addEventListener("click", () => {
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        })
+      );
+    }
   })();
 
   /* ================= HERO / TOP SLIDER (id="slider") ================= */
@@ -309,56 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* ================= DYNAMIC SCHEDULE (NEW) ================= */
-  (function initDynamicSchedule() {
-    const scheduleContainer = document.getElementById(
-      "schedule-list-container"
-    );
-    const monthTitle = document.getElementById("schedule-month-title");
-    if (!scheduleContainer || !monthTitle) return;
-
-    const today = new Date();
-    // Use 'id-ID' for Indonesian format
-    const monthYearTitle = today.toLocaleString("id-ID", {
-      month: "long",
-      year: "numeric",
-    });
-
-    // 1. Update Judul Bulan (yang berwarna biru)
-    monthTitle.innerText = monthYearTitle;
-
-    let scheduleHTML = "";
-    const saturdayCode = 6; // Saturday is 6 in JavaScript Date.getDay()
-
-    SCHEDULE_TEMPLATES.forEach((item) => {
-      // Asumsi semua kegiatan diadakan di hari SABTU (dayOfWeek = 6)
-      const eventDate = getDateForDayOrder(saturdayCode, item.dayOrder);
-
-      if (eventDate) {
-        const dayName = eventDate.toLocaleString("id-ID", { weekday: "long" });
-        const dateString = eventDate.getDate().toString().padStart(2, "0"); // Contoh: 04
-        // Ambil nama bulan pendek (Okt, Nov)
-        const monthNameShort = eventDate.toLocaleString("id-ID", {
-          month: "short",
-        });
-
-        scheduleHTML += `
-                <div class="bg-blue-800/50 backdrop-blur-md rounded-xl p-6 shadow-lg flex justify-between items-center">
-                    <div>
-                        <h4 class="font-semibold text-lg">${item.title}</h4>
-                        <p class="text-gray-300 text-sm">${item.desc}</p>
-                    </div>
-                    <div class="text-right flex-shrink-0">
-                        <p class="text-cyan-400 font-bold">${dayName}, ${dateString} ${monthNameShort}</p>
-                        <p class="text-sm">${item.time}</p>
-                    </div>
-                </div>
-            `;
-      }
-    });
-
-    scheduleContainer.innerHTML = scheduleHTML;
-  })();
 });
 
 // ===================== AUTO SLIDER GALERI ===================== //

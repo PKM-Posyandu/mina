@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -141,6 +141,24 @@
           <a href="#jadwal" class="text-gray-900 hover:text-blue-600"
             >Jadwal</a
           >
+          <div class="border-t border-gray-200 pt-4 space-y-2">
+            <a
+              href="pages/inovasi.html"
+              class="block text-gray-900 hover:text-blue-600"
+              >Inovasi</a
+            >
+            <a
+              href="/cakupan"
+              class="block text-gray-900 hover:text-blue-600"
+              >Cakupan</a
+            >
+            <a
+              href="https://form.jotform.com/252012498192052"
+              target="_blank"
+              class="block text-gray-900 hover:text-blue-600"
+              >Daftar Sekarang</a
+            >
+          </div>
           <input
             type="text"
             placeholder="Cari..."
@@ -151,30 +169,30 @@
     </header>
 
     <main>
-      <section id="beranda" class="relative w-full h-96 overflow-hidden">
+      <section id="beranda" class="relative w-full h-[55vh] min-h-[280px] md:h-[32rem] overflow-hidden">
         <div
           id="slider"
-          class="flex transition-transform duration-700 ease-in-out"
+          class="flex h-full transition-transform duration-700 ease-in-out"
         >
-          <div class="w-full h-96 flex-shrink-0">
+          <div class="w-full h-full flex-shrink-0 relative overflow-hidden bg-gray-900">
             <img
-              src="{{ asset('assets/images/header-mina.jpg') }}"
+              src="{{ asset('assets/images/header.4.jpg') }}"
               alt="Header Posyandu Mina"
-              class="w-full h-full object-cover"
+              class="hero-slide-img"
             />
           </div>
-          <div class="w-full h-96 flex-shrink-0">
+          <div class="w-full h-full flex-shrink-0 relative overflow-hidden bg-gray-900">
             <img
-              src="{{ asset('assets/images/wajah ramah posyandu.jpg') }}"
-              alt="Foto 2"
-              class="w-full h-full object-cover"
+              src="{{ asset('assets/images/header.3.jpg') }}"
+              alt="Header Slide 2"
+              class="hero-slide-img"
             />
           </div>
-          <div class="w-full h-96 flex-shrink-0">
+          <div class="w-full h-full flex-shrink-0 relative overflow-hidden bg-gray-900">
             <img
-              src="{{ asset('assets/images/Tumbuh Kembang anak.jpg') }}"
-              alt="Foto 3"
-              class="w-full h-full object-cover"
+              src="{{ asset('assets/images/header.2.jpg') }}"
+              alt="Header Slide 3"
+              class="hero-slide-img"
             />
           </div>
         </div>
@@ -183,13 +201,13 @@
           onclick="prevTopSlide()"
           class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full z-10"
         >
-          ◀
+          &#9664;
         </button>
         <button
           onclick="nextTopSlide()"
           class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full z-10"
         >
-          ▶
+          &#9654;
         </button>
 
         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
@@ -210,7 +228,7 @@
             onclick="closeModal()"
             class="absolute top-2 right-2 text-gray-600 hover:text-black text-2xl"
           >
-            ×
+            Ã—
           </button>
           <h2 id="modal-title" class="text-xl font-bold mb-4 text-gray-800">
             Judul SPM
@@ -242,7 +260,7 @@
             </p>
 
             <p>
-              Didukung oleh <strong>5 orang kader aktif</strong> yang telah
+              Didukung oleh <strong>7 orang kader aktif</strong> yang telah
               mengikuti pembinaan dan pelatihan, Posyandu ILP Mina berkomitmen
               memberikan layanan kesehatan rutin seperti
               <strong>penimbangan, imunisasi, pelayanan gizi & PMT</strong>,
@@ -286,7 +304,7 @@
             <a href="pages/layanan/remaja.html" class="service-card block">
               <div class="service-image">
                 <img
-                src="{{ asset('assets/images/rame sehat.jpg') }}"
+                src="{{ asset('assets/images/Penyuluhan gizi.jpg') }}"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -353,28 +371,28 @@
       <section id="spm" class="py-12 bg-white">
         <div class="container mx-auto px-6 text-center">
           <h2 class="section-title text-center mb-10">Standar Pelayanan Minimal (SPM)</h2>
-          <div class="grid grid-cols-6 gap-8 justify-center items-center mx-auto w-fit">
-            <a href="pages/SPM/pendidikan.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-12 justify-center items-center mx-auto max-w-[90rem] px-2 sm:px-0">
+            <a href="pages/SPM/pendidikan.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Pendidikan.png') }}" alt="Ikon Pendidikan" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a href="pages/SPM/kesehatan.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+            <a href="pages/SPM/kesehatan.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Kesehatann.png') }}" alt="Ikon Kesehatan" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a href="pages/SPM/pekerjaan_umum.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+            <a href="pages/SPM/pekerjaan_umum.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Pekerjaan_Umum.png') }}" alt="Ikon Pekerjaan Umum" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a href="pages/SPM/perumahan_rakyat.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+            <a href="pages/SPM/perumahan_rakyat.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Perumahan_Rakyat.png') }}" alt="Ikon Perumahan Rakyat" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a href="pages/SPM/trantibunlinmas.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+            <a href="pages/SPM/trantibunlinmas.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Trantibunlinmas.png') }}" alt="Ikon Trantibunlinmas" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
 
-            <a href="pages/SPM/sosial.html" class="w-24 h-24 flex items-center justify-center rounded-2xl overflow-hidden transform transition duration-300 hover:scale-110 hover:shadow-lg">
+            <a href="pages/SPM/sosial.html" class="w-full max-w-[11rem] sm:max-w-[12.5rem] mx-auto aspect-square flex items-center justify-center rounded-[2.75rem] overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
               <img src="{{ asset('assets/images/Sosial.png') }}" alt="Ikon Sosial" class="h-full w-full object-cover rounded-lg m-0 p-0">
             </a>
           </div>
@@ -392,52 +410,91 @@
           </p>
 
           <h3
-            id="schedule-month-title"
             class="text-center text-2xl font-semibold text-cyan-400 mb-6"
-          ></h3>
+          >
+            {{ $scheduleMonthLabel }}
+          </h3>
 
-          <div id="schedule-list-container" class="space-y-6"></div>
-
-          <div class="mt-8" align="center">
-            <a
-              href="https://form.jotform.com/252012498192052"
-              class="btn-primary"
-              target="_blank"
-            >
-              Daftar Sekarang
-            </a>
+          <div class="space-y-6">
+            @forelse($schedules as $schedule)
+            @php
+              $eventDate = $schedule->event_date?->copy()->locale('id');
+              $timeRange = $schedule->start_time ? substr($schedule->start_time, 0, 5) : null;
+              if ($schedule->end_time) {
+                  $timeRange = $timeRange
+                      ? $timeRange . ' - ' . substr($schedule->end_time, 0, 5)
+                      : substr($schedule->end_time, 0, 5);
+              }
+            @endphp
+            <div class="bg-blue-800/50 backdrop-blur-md rounded-xl p-6 shadow-lg flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h4 class="font-semibold text-lg">{{ $schedule->title }}</h4>
+                @if($schedule->description)
+                <p class="text-gray-300 text-sm">
+                  {{ $schedule->description }}
+                </p>
+                @endif
+              </div>
+              <div class="text-left md:text-right flex-shrink-0">
+                <p class="text-cyan-400 font-bold">
+                  {{ $eventDate ? $eventDate->translatedFormat('l, d M') : '-' }}
+                </p>
+                <p class="text-sm">
+                  {{ $timeRange ? $timeRange . ' WIB' : 'Waktu akan diumumkan' }}
+                </p>
+                @if($schedule->location)
+                  <p class="text-xs text-gray-200 mt-1">
+                    Lokasi: {{ $schedule->location }}
+                  </p>
+                @endif
+              </div>
+            </div>
+            @empty
+            <div class="border border-white/20 rounded-xl p-6 text-center bg-white/10">
+              <p class="text-sm text-white">
+                Jadwal posyandu belum tersedia. Silakan kembali lagi nanti.
+              </p>
+            </div>
+            @endforelse
           </div>
+
         </div>
       </section>
     </main>
 
       <footer id="main-footer" class="bg-white text-gray-800 py-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:justify-between md:items-start gap-8">
           
           <!-- KIRI -->
-          <div>
+          <div class="text-center md:text-left w-full md:w-1/3 space-y-3">
             <h3 class="text-lg font-semibold mb-3">Kontak</h3>
-            <p>Telp: +62 812-5111-6001 (Admin)</p>
-            <p>Email: sipandumina@gmail.com </p>
+            <div class="flex items-center gap-3 justify-center md:justify-start text-gray-700">
+              <i class="fa-solid fa-phone text-cyan-500 text-lg"></i>
+              <a href="tel:+6281251116001" class="hover:underline">Telp: +62 812-5111-6001 (Admin)</a>
+            </div>
+            <div class="flex items-center gap-3 justify-center md:justify-start text-gray-700">
+              <i class="fa-solid fa-envelope text-cyan-500 text-lg"></i>
+              <a href="mailto:sipandumina@gmail.com" class="hover:underline">Email: sipandumina@gmail.com</a>
+            </div>
           </div>
 
           <!-- TENGAH (Ikuti Kami) -->
-          <div class="text-center">
+          <div class="text-center w-full md:w-1/3">
             <h3 class="text-lg font-semibold mb-3">Ikuti Kami</h3>
             <div class="flex justify-center gap-4 text-xl">
-              <a href="https://www.instagram.com/posyandu.mina" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/posyandu.ilp.mina/" class="hover:text-gray-600"><i class="fa-brands fa-instagram"></i></a>
               <a href="https://wa.me/6281251116001" class="hover:text-gray-600"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
 
           <!-- KANAN (Alamat) -->
-          <div class="text-right">
+          <div class="text-center md:text-right w-full md:w-1/3">
             <h3 class="text-lg font-semibold mb-3">Alamat</h3>
             <p>Jl. Mina Raya 2 Blok Mina, Kelurahan Panunggangan Barat, Kecamatan Cibodas, Kota Tangerang</p>
             <p class="flex items-center justify-center md:justify-end">
                 <i class="fas fa-map-marker-alt mr-2 text-blue-300"></i>
                 <a
-                  href="https://maps.app.goo.gl/nUcnFhVRrmYprBzL7?g_st=iw"
+                  href="https://maps.app.goo.gl/gY4Z28YPAiXb6v1w7?g_st=com.google.maps.preview.copy"
                   target="_blank"
                   class="hover:underline"
                   >Lihat di Google Maps</a>
@@ -455,5 +512,4 @@
     <script src="{{ asset('assets/js/posyandu.js') }}"></script>
   </body>
 </html>
-
 

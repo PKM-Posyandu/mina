@@ -27,6 +27,8 @@
 body {
   font-family: "Product Sans", sans-serif;
   font-weight: 400; /* Set default weight to regular */
+  margin: 0; /* remove default browser margin that created the white strip */
+  overflow-x: hidden; /* prevent stray horizontal scroll that shows white gaps */
 }
 
 /* Navbar links */
@@ -225,4 +227,29 @@ body.dark-mode #main-footer {
   height: auto;
   object-fit: cover;
   display: block;
+}
+
+
+/* Hero slider responsive */
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #beranda {
+    height: auto;
+    min-height: 280px;
+  }
+  #beranda #slider,
+  #beranda #slider > div {
+    height: 100%;
+  }
+  .hero-slide-img {
+    object-fit: contain;
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+  }
 }

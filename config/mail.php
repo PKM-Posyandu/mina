@@ -115,4 +115,6 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    'complaints_recipient' => env('COMPLAINTS_NOTIFICATION_EMAIL', env('MAIL_FROM_ADDRESS')),
+
 ];

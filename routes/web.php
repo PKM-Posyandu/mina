@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Admin\CakupanController as AdminCakupanController;
 use App\Http\Controllers\Front\CakupanController as FrontCakupanController;
+use App\Http\Controllers\ScheduleController;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home'); // Update root route
 
@@ -31,8 +32,13 @@ Route::middleware('guest')->group(function () {
 });
 
 
-Route::post('/complaints', [ComplaintController::class, 'store'])->name('complaints.store');
+Route::post('/complaints', [ComplaintController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('complaints.store');
 Route::get('/pengaduan', [ComplaintController::class, 'create'])->name('complaints.create');
+Route::get('/complaints/bukti/{complaint}', [ComplaintController::class, 'showBukti'])
+    ->name('complaints.bukti')
+    ->middleware('signed');
 
 Route::redirect('/admin', '/dashboard');
 
@@ -51,13 +57,10 @@ Route::middleware(['auth', 'admin.access'])->prefix('dashboard')->group(function
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
     Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
     Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
-    // Cakupan upload (admin)
-    Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
-    Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
-});
 
-// Admin routes for cakupan upload (protected)
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+    // Schedule management
+    Route::resource('schedules', ScheduleController::class)->except(['show', 'create', 'edit']);
+    // Cakupan upload (admin)
     Route::get('/cakupan/upload', [AdminCakupanController::class, 'form'])->name('admin.cakupan.upload');
     Route::post('/cakupan/upload', [AdminCakupanController::class, 'import'])->name('admin.cakupan.import');
 });
