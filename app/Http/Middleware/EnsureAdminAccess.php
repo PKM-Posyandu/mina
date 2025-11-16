@@ -24,7 +24,8 @@ class EnsureAdminAccess
 
         $isAllowed = $user && (
             $isAdminFlag ||
-            (!empty($allowedEmails) && in_array(strtolower($user->email), $allowedEmails, true))
+            empty($allowedEmails) ||
+            in_array(strtolower($user->email), $allowedEmails, true)
         );
 
         if (! $isAllowed) {
